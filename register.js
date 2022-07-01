@@ -46,10 +46,18 @@ function displayInfo()
 console.log(petSalon.hours.close);
 console.log(petSalon.pets[0]);
 
-//calling the function displayInfo();
-displayInfo();
-
 for(let i=0; i<petSalon.pets.length; i++)
     {
         document.getElementById("pets-list").innerHTML += `<li> ${petSalon.pets[i].name}</li>`
     }
+
+//displayAlert where we use the alert to display how many pets we have registered.
+function displayAlert()
+{
+    alert(`This is how many pets we have registered so far. ${petSalon.pets.length} pets`);
+}
+
+
+//calling the function displayInfo();
+displayInfo();
+
