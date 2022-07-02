@@ -21,3 +21,12 @@ main{
     background-color: rgb(32, 192, 40);
     padding: 50px;
 }
+
+.lesser-margin{
+    margin-left: 350px;
+    width: 900px;
+}
+
+.pets-container{
+    margin: 55px;
+}
