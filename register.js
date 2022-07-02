@@ -50,7 +50,15 @@ for(let i=0; i<petSalon.pets.length; i++)
     {
         document.getElementById("pets-list").innerHTML += `<li> ${petSalon.pets[i].name}</li>`
     }
+function displayConsole()
+{
+    
+    for(let i=0; i<petSalon.pets.length; i++)
+    {
+        console.log(petSalon.pets[i].name);
+    }
 
+}
 //displayAlert where we use the alert to display how many pets we have registered.
 function displayAlert()
 {
@@ -60,4 +68,4 @@ function displayAlert()
 
 //calling the function displayInfo();
 displayInfo();
-
+displayConsole();
