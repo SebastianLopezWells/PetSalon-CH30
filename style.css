@@ -9,24 +9,64 @@ button{
     margin-left: 30px;
 }
 .nav-footer{
-    background-color: gray;
-    padding: 100px;
+    background-color: rgb(39, 43, 39);
+    padding:35px;
 }
 
 main{
-    margin-bottom: 600px;
+    margin-bottom: 200px;
 }
 
-.color-blue-nav{
-    background-color: rgb(32, 192, 40);
-    padding: 50px;
+body{
+    background-color: blanchedalmond;
+}
+.color-gray-nav{
+    background-color: rgb(39, 43, 39);
+    padding-top: 25px;
 }
 
-.lesser-margin{
-    margin-left: 350px;
-    width: 900px;
+.footer-nav{
+    background-color: aliceblue;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
 }
 
 .pets-container{
     margin: 55px;
+}
+
+.container-S{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 12px;
+}
+
+.lesser-margin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 900px;
+    padding: 55px;
+    background-color: #ffd6d6;
+}
+
+.col-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-tabs{
+    --bs-nav-tabs-border-width: 12px
+    
+}
+
+a{
+    color: red;
+}
+
+footer{
+    color: #6a08a7;
 }

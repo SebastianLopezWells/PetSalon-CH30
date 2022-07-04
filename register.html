@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <nav class="nav justify-content-end color-blue-nav">
+        <nav class="nav justify-content-center color-gray-nav">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a class="nav-link " aria-current="page" href="index.html">Home</a>
@@ -31,45 +31,47 @@
     </header>
 
     <main>
-        
-        <div class="form-control mb-3 lesser-margin">
-        <h2> Register  a new pet</h2>
-            <div class="input-group mb-3">
-                <input type="text" id="txtPetName"      placeholder="Enter pet's name" class="form-control">
+        <div class="container-S">
+            <div class="form-control mb-3 lesser-margin ">
+                <div class="col-container">
+                    <h2> Register  a new pet</h2>
+                    <p id="pets-number"></p>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" id="txtPetName"      placeholder="Enter pet's name" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" id="txtPetAge"       placeholder="Enter pet's age"  class="form-control" >
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" id="txtPetGender"    placeholder="Enter pet's gender" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" id="txtPetBreed"     placeholder="Enter pet's breed" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <select  id="txtPetService"   class="form-control">
+                        <option id="op1" value="Gromming" selected>Groomin</option>
+                        <option id="op2"value="Cutting Nails">Cutting Nails</option>
+                        <option id="op3"value="Bath">Bath</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" id="txtPetOName"     placeholder="Enter pet's Owner Name" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" id="txtPetContact"   placeholder="Enter pet's Contact Phone" class="form-control">
+                </div>
+                <button type="button" id="btnRegister" onclick="register();" class="btn btn-dark">Register</button>
             </div>
-            <div class="input-group mb-3">
-                <input type="text" id="txtPetAge"       placeholder="Enter pet's age"  class="form-control" >
-            </div>
-            <div class="input-group mb-3">
-                <input type="text" id="txtPetGender"    placeholder="Enter pet's gender" class="form-control">
-            </div>
-            <div class="input-group mb-3">
-                <input type="text" id="txtPetBreed"     placeholder="Enter pet's breed" class="form-control">
-            </div>
-            <div class="input-group mb-3">
-                <input type="text" id="txtPetService"   placeholder="Enter pet's Service" class="form-control">
-            </div>
-            <div class="input-group mb-3">
-                <input type="text" id="txtPetOName"     placeholder="Enter pet's Owner Name" class="form-control">
-            </div>
-            <div class="input-group mb-3">
-                <input type="text" id="txtPetContact"   placeholder="Enter pet's Contact Phone" class="form-control">
-            </div>
-            <button type="button" id="btnRegister" onclick="register();">Register</button>
-        </div>
-
-        <button id="alert" class="btn btn-primary" onclick="displayAlert();">Pets in the Salon</button>
-        <div class="pets-container">
-            <ol id="pets-list">
-
-            </ol>
-            <p id="pets-number"></p>
         </div>
     </main>
 
-    <footer>
-        <p>All copyrigths reserved Sebastian Wells &copy; 2022</p>
-        <p id="infor"> </p>
+    <footer class="nav-footer nav-justified">
+        <nav class="footer-nav">
+            <p>All copyrigths reserved Sebastian Wells &copy; 2022</p>
+            <p id="infor"> </p>
+        </nav>
     </footer>
     <script src="register.js"></script>
 </body>

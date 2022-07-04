@@ -45,10 +45,6 @@ function displayAlert()
 }
 
 function displayNumberPets(){
-    for(let i=0; i<petSalon.pets.length; i++)
-    {
-        document.getElementById("pets-list").innerHTML += `<li> ${petSalon.pets[i].name}</li>`
-    }
     document.getElementById("pets-number").innerHTML = `The number of pets we are displaying are: ${petSalon.pets.length}`
 }
 
@@ -63,7 +59,7 @@ function clearInputs(){
      document.getElementById("txtPetAge").value="";
      document.getElementById("txtPetGender").value="";
      document.getElementById("txtPetBreed").value="";
-     document.getElementById("txtPetService").value="";
+     document.getElementById("txtPetService").value=document.getElementById("op1").value;
      document.getElementById("txtPetOName").value="";
      document.getElementById("txtPetContact").value="";
 }
