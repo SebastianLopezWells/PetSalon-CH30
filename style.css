@@ -85,8 +85,19 @@ footer{
 }
 
 .table{
-    border-color: darkgoldenrod;
+    border-color: rgb(3, 3, 2);
     background-color: bisque;
     width: 1200px;
     margin-top: 25px;
+}
+
+.selected{
+    background-color:  whitesmoke;
+    border: 20px solid darkgoldenrod;
+}
+
+.selected  td .btn{
+    background-color: rgb(219, 174, 24);
+    border-color: rgb(219, 174, 24);
+    color: rgb(0, 0, 0);
 }

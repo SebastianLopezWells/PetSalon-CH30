@@ -27,10 +27,10 @@ function displayTables() {
     for(let i = 0; i < petSalon.pets.length; i++)
     {
         let tablePet=petSalon.pets[i];
-        let id= i+1;
+        //tablePet.id = i;
         table += ` 
-                        <tr>
-                            <th scope="row">${id}</th>
+                        <tr id="${tablePet.id}">
+                            <th scope="row" >${tablePet.id}</th>
                             <td>${tablePet.name}</td>
                             <td>${tablePet.age}</td>
                             <td>${tablePet.gender}</td>
@@ -38,6 +38,7 @@ function displayTables() {
                             <td>${tablePet.service}</td>
                             <td>${tablePet.ownerName}</td>
                             <td>${tablePet.contactPhone}</td>
+                            <td><button class="btn btn-danger" onClick="deletePet(${tablePet.id});"> Delete </button></td>
                         </tr>` 
     }
     document.getElementById('tbody').innerHTML = table;

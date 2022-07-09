@@ -12,6 +12,7 @@ let petSalon = {
 }
 
 //constructor
+let c=0;
 function Pet(name, age, gender,breed, service, ownerName, contactPhone){
     //atributes = parameters 
     this.name = name;
@@ -21,6 +22,7 @@ function Pet(name, age, gender,breed, service, ownerName, contactPhone){
     this.service = service;
     this.ownerName = ownerName;
     this.contactPhone = contactPhone;
+    this.id = c++;
 }
 
 //functions
@@ -98,7 +100,26 @@ function register(){
     }
 }
 
+function deletePet(petID){
+    //remove the pet from the table
+    document.getElementById(petID).remove();
+    //declared a local variable
+    let petIndex;
+    //travel the array 
+    for(let i=0; i<petSalon.length; i++){
+        //storting the value of the array on a variable
+        let pet = petSalon.pets[i]; 
 
+        //if to know if the petId is correct or not
+        if(pet.id == petID){
+            petIndex = i;
+        }
+    }
+    //Splice to remove the pet from the array
+    petSalon.pets.splice(petIndex, 1);
+    
+    displayNumberPets();
+}
 
 //have displayed the information in the document as a LIST
 for(let i=0; i<petSalon.pets.length; i++)
@@ -106,6 +127,21 @@ for(let i=0; i<petSalon.pets.length; i++)
         document.getElementById("pets-list").innerHTML += `<li> ${petSalon.pets[i].name}</li>`
     }
 
+function search(){    
+    console.log("Searching...");
+    let searchTo = document.getElementById("txtSearch").value;
+    
+    for (let i = 0; i < petSalon.pets.length; i++) 
+    {
+        
+        let pet = petSalon.pets[i];
+        if(searchTo.toLowerCase() == pet.name.toLowerCase()){
+            document.getElementById(pet.id).classList.add("selected");console.log("Searching"+ searchTo);
+        }else{
+            document.getElementById(pet.id).classList.remove("selected");
+        }
+    } 
+}
 function init(){
     //creating objects
         let scooby = new Pet("Scooby", 12, "Male", "Stray Dog","Cutting Nails", "Sebastian", "664-820-4622");
