@@ -27,11 +27,11 @@
                 </li>
             </ul>
         </nav>    
-        <h1 class="display-1">Pet Salon</h1>
+        <h1 class="display-2 neg-margin ">Registration Form</h1>
     </header>
 
     <main>
-        <div class="container-S">
+        <div class="container-S small-sc">
             <div class="form-control mb-3 lesser-margin ">
                 <div class="col-container">
                     <h2> Register  a new pet</h2>
@@ -62,38 +62,39 @@
                 <div class="input-group mb-3">
                     <input type="text" id="txtPetContact"   placeholder="Enter pet's Contact Phone" class="form-control">
                 </div>
-                <button type="button" id="btnRegister" onclick="register();" class="btn btn-dark">Register</button>
+                <button type="button" id="btnRegister" onclick="register();" class="btn btn-dark lesser-top-margin">Register</button>
             </div>
 
             <div id="pet-cards" class="pets"> 
 
             </div>
-            <div id="search">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control"  placeholder="Search for owners name" id="txtSearch" placeholderaria-label="Search for owners name" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary" type="button"  onclick="search();">Search</button>
+            <div class="data-container">
+                <div id="search">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control"  placeholder="Search for owners name" id="txtSearch" placeholderaria-label="Search for owners name" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button"  onclick="search();">Search</button>
+                    </div>
+                    
                 </div>
-                
+                <table id="pet-table" class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Breed</th>
+                            <th scope="col">Service</th>
+                            <th scope="col">Owner</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
             </div>
-            <table id="pet-table" class="table table-bordered">
-                <thead class="table-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Gender</th>
-                        <th scope="col">Breed</th>
-                        <th scope="col">Service</th>
-                        <th scope="col">Owner</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Delete</th>
-                    </tr>
-                </thead>
-                <tbody id="tbody">
-                </tbody>
-            </table>
         </div>
-            
     </main>
 
     <footer class="nav-footer nav-justified">
@@ -102,7 +103,7 @@
             <p id="infor"> </p>
         </nav>
     </footer>
-    <script src="register.js"></script>
-    <script src="display.js"></script>
+    <script src="Js\register.js"></script>
+    <script src="Js\display.js"></script>
 </body>
 </html>
